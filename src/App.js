@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
+import ContactForm from "./Component/ContactForm";
+import ContactList from "./Component/ContactList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container className="App">
+            <Row className="title">
+                <h1>Phone Book</h1>
+            </Row>
+            <Row className="input-area">
+                <Col>
+                    <ContactForm />
+                </Col>
+                <Col>
+                    <ContactList />
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default App;
